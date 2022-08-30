@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="500dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/videoIV">
+
+        <ImageView
+            android:id="@+id/channelIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/videoIV"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mirador_salento_eje_cafetero"
+        app:layout_constraintDimensionRatio="1.1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/mirador_salento_eje_cafetero" />
+
+    <TextView
+        android:id="@+id/titleTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <TextView
+        android:id="@+id/commentAuthorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="les gusta esto."
+        app:layout_constraintBottom_toBottomOf="@+id/numLikesTV"
+        app:layout_constraintStart_toEndOf="@+id/numLikesTV"
+        app:layout_constraintTop_toTopOf="@+id/numLikesTV" />
+
+    <TextView
+        android:id="@+id/dateTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="les gusta esto."
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/numLikesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="*"
+        app:layout_constraintBottom_toBottomOf="@+id/channelTV"
+        app:layout_constraintStart_toEndOf="@+id/channelTV"
+        app:layout_constraintTop_toTopOf="@+id/channelTV" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="*"
+        app:layout_constraintBottom_toBottomOf="@+id/commentAuthorTV"
+        app:layout_constraintStart_toEndOf="@+id/commentAuthorTV"
+        app:layout_constraintTop_toTopOf="@+id/commentAuthorTV" />
+
+    <TextView
+        android:id="@+id/durationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="#70000000"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:text="TextView"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="@+id/videoIV"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/channelTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="TextView"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/titleTV"
+        app:layout_constraintTop_toBottomOf="@+id/titleTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

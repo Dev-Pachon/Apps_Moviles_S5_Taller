@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:cardCornerRadius="500dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/userIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:src="@drawable/mirador_salento_eje_cafetero" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/userNameTV"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="@+id/cardView" />
+
+    <Button
+        android:id="@+id/likeBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/heart"
+        android:contentDescription="Like"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/commentBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/heart"
+        app:layout_constraintStart_toEndOf="@+id/likeBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@drawable/heart"
+        app:layout_constraintStart_toEndOf="@+id/commentBtn"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:layout_weight="1"
+        android:background="@drawable/heart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2" />
+
+    <TextView
+        android:id="@+id/numLikesTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/likeBtn" />
+
+    <TextView
+        android:id="@+id/durationTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:text="Me gusta"
+        app:layout_constraintBottom_toBottomOf="@+id/numLikesTV"
+        app:layout_constraintStart_toEndOf="@+id/numLikesTV"
+        app:layout_constraintTop_toTopOf="@+id/numLikesTV" />
+
+    <TextView
+        android:id="@+id/commentAuthorTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="les gusta esto."
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/numLikesTV"
+        app:layout_constraintTop_toBottomOf="@+id/durationTV" />
+
+    <TextView
+        android:id="@+id/commentDescriptionTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="les gusta esto."
+        app:layout_constraintStart_toEndOf="@+id/commentAuthorTV"
+        app:layout_constraintTop_toTopOf="@+id/commentAuthorTV" />
+
+    <TextView
+        android:id="@+id/dateInstaTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="les gusta esto."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/cardView3"
+        app:layout_constraintTop_toBottomOf="@+id/cardView3" />
+
+    <TextView
+        android:id="@+id/placeTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="@+id/userNameTV"
+        app:layout_constraintTop_toBottomOf="@+id/userNameTV" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintDimensionRatio="1.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeTV">
+
+        <ImageView
+            android:id="@+id/publicationIV"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        app:cardCornerRadius="500dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/commentAuthorTV">
+
+        <ImageView
+            android:id="@+id/myPhotoIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_launcher_foreground" />
+    </androidx.cardview.widget.CardView>
+
+    <EditText
+        android:id="@+id/addCommentTV"
+        style="@android:style/Widget.AutoCompleteTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:inputType="textLongMessage"
+        android:text="Name"
+        app:layout_constraintBottom_toBottomOf="@+id/cardView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cardView3"
+        app:layout_constraintTop_toTopOf="@+id/cardView3" />
+
+    <Button
+        android:id="@+id/addInstaCommentBtn"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/heart"
+        android:textSize="16sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/addCommentTV"
+        app:layout_constraintEnd_toEndOf="@+id/addCommentTV"
+        app:layout_constraintTop_toTopOf="@+id/addCommentTV" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
